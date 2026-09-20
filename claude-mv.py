@@ -2,6 +2,11 @@
 """Move a project directory together with its Claude Code context
 (sessions, history, file-history, todos, shell-snapshots, debug).
 
+Windows-compatible Python port of the original Bash/macOS script by Chase,
+"Rescuing your Claude conversations when you rename projects":
+https://curiouslychase.com/posts/rescuing-your-claude-conversations-when-you-rename-projects/
+The original script is kept for reference in ref/claude-mv.
+
 Usage:
     claude-mv.py <old_directory> <new_directory>
         Move <old_directory> to <new_directory> and relocate its Claude context.

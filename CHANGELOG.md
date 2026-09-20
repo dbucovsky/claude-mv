@@ -2,6 +2,10 @@
 
 All notable changes to the `claude-mv` scripts are documented here.
 
+## V1.1.1 — 2026-09-20 12:05
+### Changes
+- Moved the original Bash script to `ref/claude-mv` and credited its author, Chase — [Rescuing your Claude conversations when you rename projects](https://curiouslychase.com/posts/rescuing-your-claude-conversations-when-you-rename-projects/) — in `README.md`, `doc/wiki/Usage.md`, and both scripts' headers.
+
 ## V1.1.0 — 2026-09-20 11:52
 ### Changes
 - Added `.anchor` file tracking: `claude-mv.py --anchor` records the current folder's absolute path with a timestamp.

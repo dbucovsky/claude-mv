@@ -1,6 +1,6 @@
 # Usage
 
-`claude-mv.py` supports three modes: an explicit two-argument move, an `--anchor` write, and a no-argument anchor sync. `claude-mv` (the original Bash script) supports only the first, and requires Git Bash or WSL on Windows.
+`claude-mv.py` supports three modes: an explicit two-argument move, an `--anchor` write, and a no-argument anchor sync. `ref/claude-mv` (the original Bash script, kept for reference) supports only the first, and requires Git Bash or WSL on Windows.
 
 ## 1. Explicit move: `claude-mv.py <old_directory> <new_directory>`
 
@@ -65,4 +65,10 @@ Plain text, one entry per line, appended (never overwritten) so it doubles as a 
 ## Notes
 
 - `claude-mv.py` requires no third-party packages — just Python 3.
-- The original `claude-mv` Bash script only replaces `/` and `.` when encoding paths, which is correct for macOS/Linux but not for Windows paths (which also need `:`, `\`, and spaces encoded). Use `claude-mv.py` on Windows.
+- The original `ref/claude-mv` Bash script only replaces `/` and `.` when encoding paths, which is correct for macOS/Linux but not for Windows paths (which also need `:`, `\`, and spaces encoded). Use `claude-mv.py` on Windows.
+
+## Credits
+
+`ref/claude-mv` is the original script, written for macOS/Linux by Chase:
+[Rescuing your Claude conversations when you rename projects](https://curiouslychase.com/posts/rescuing-your-claude-conversations-when-you-rename-projects/).
+`claude-mv.py` is a Windows-compatible Python port, with the `.anchor` tracking feature (this wiki's [[Home]] page) added on top.

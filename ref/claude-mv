@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+# Original source (macOS/Linux): Chase, "Rescuing your Claude conversations
+# when you rename projects"
+# https://curiouslychase.com/posts/rescuing-your-claude-conversations-when-you-rename-projects/
+# Kept here for reference; claude-mv.py in the parent folder is the
+# Windows-compatible Python port.
+
 # Usage: claude-mv <old_directory> <new_directory>
 
 if [ $# -ne 2 ]; then
