@@ -2,6 +2,11 @@
 
 All notable changes to the `claude-mv` scripts are documented here.
 
+## V1.1.3 — 2026-09-20 13:10
+### Changes
+- Added `claude-mv.py --version` (also `-v`) to print the script version.
+- Added `claude-mv.py --help` (also `-h`) to print the usage summary and exit cleanly (exit code 0).
+
 ## V1.1.2 — 2026-09-20 12:40
 ### Changes
 - Set GitHub's default branch to `main` (was `win-ver`); `main` is pushed with its single empty initial commit, `win-ver` remains the active branch to be merged back into `main`.
