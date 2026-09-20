@@ -2,6 +2,11 @@
 
 All notable changes to the `claude-mv` scripts are documented here.
 
+## V1.1.2 — 2026-09-20 12:40
+### Changes
+- Set GitHub's default branch to `main` (was `win-ver`); `main` is pushed with its single empty initial commit, `win-ver` remains the active branch to be merged back into `main`.
+- Added `.github/workflows/wiki-sync.yml`, which auto-syncs `doc/wiki/` to the repo's GitHub Wiki on every push to `main` touching `doc/wiki/**` (plus manual `workflow_dispatch`).
+
 ## V1.1.1 — 2026-09-20 12:05
 ### Changes
 - Moved the original Bash script to `ref/claude-mv` and credited its author, Chase — [Rescuing your Claude conversations when you rename projects](https://curiouslychase.com/posts/rescuing-your-claude-conversations-when-you-rename-projects/) — in `README.md`, `doc/wiki/Usage.md`, and both scripts' headers.
