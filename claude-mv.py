@@ -21,6 +21,12 @@ Usage:
         last entry in its .anchor file is the OLD location, then relocate the
         Claude context to match (without moving any files, since the folder
         is already where it needs to be). Appends the new location to .anchor.
+
+    claude-mv.py --version
+        Print the script version and exit.
+
+    claude-mv.py --help
+        Print this usage summary and exit.
 """
 
 import re
@@ -28,6 +34,8 @@ import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
+
+__version__ = "1.1.3"
 
 CONTEXT_SUBDIRS = ["projects", "file-history", "todos", "shell-snapshots", "debug"]
 ANCHOR_FILENAME = ".anchor"
@@ -290,6 +298,12 @@ def print_usage():
     print("  claude-mv.py <old_directory> <new_directory>   Move a directory and its Claude context")
     print("  claude-mv.py --anchor                          Record this folder's path in .anchor")
     print("  claude-mv.py                                   Sync Claude context after moving the anchored folder")
+    print("  claude-mv.py --version                         Show the script version")
+    print("  claude-mv.py --help                            Show this usage summary")
+
+
+def print_version():
+    print(f"claude-mv.py {__version__}")
 
 
 def main():
@@ -297,6 +311,10 @@ def main():
 
     if len(args) == 0:
         run_anchor_sync()
+    elif len(args) == 1 and args[0] in ("--version", "-v"):
+        print_version()
+    elif len(args) == 1 and args[0] in ("--help", "-h"):
+        print_usage()
     elif len(args) == 1 and args[0] in ("--anchor", "anchor"):
         run_write_anchor()
     elif len(args) == 2:

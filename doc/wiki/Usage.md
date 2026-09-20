@@ -1,6 +1,6 @@
 # Usage
 
-`claude-mv.py` supports three modes: an explicit two-argument move, an `--anchor` write, and a no-argument anchor sync. `ref/claude-mv` (the original Bash script, kept for reference) supports only the first, and requires Git Bash or WSL on Windows.
+`claude-mv.py` supports three modes: an explicit two-argument move, an `--anchor` write, and a no-argument anchor sync, plus `--version` and `--help`. `ref/claude-mv` (the original Bash script, kept for reference) supports only the two-argument move, and requires Git Bash or WSL on Windows.
 
 ## 1. Explicit move: `claude-mv.py <old_directory> <new_directory>`
 
@@ -61,6 +61,13 @@ Plain text, one entry per line, appended (never overwritten) so it doubles as a 
 - Each line is `<timestamp>:<absolute path>`.
 - The timestamp uses `-` instead of `:` in the time portion (`HH-MM-SS`) specifically so the line can be split on the *first* colon to separate the timestamp from a Windows path — otherwise the path's own drive-letter colon (`C:`) would be ambiguous.
 - The **last line** is always the current/most recent known location.
+
+## 4. Version and help
+
+```
+python claude-mv.py --version   # prints e.g. "claude-mv.py 1.1.2"
+python claude-mv.py --help      # prints the usage summary
+```
 
 ## Notes
 
