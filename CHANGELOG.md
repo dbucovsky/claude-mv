@@ -2,6 +2,18 @@
 
 All notable changes to the `claude-mv` scripts are documented here.
 
+## V1.1.0 — 2026-09-20 11:52
+### Changes
+- Added `.anchor` file tracking: `claude-mv.py --anchor` records the current folder's absolute path with a timestamp.
+- Added no-argument mode: running `claude-mv.py` with no parameters reads the last recorded location from `.anchor` in the current folder as the old path, treats the current folder as the new path, and re-syncs the Claude Code context without physically moving anything.
+- Explicit two-argument moves now also append to `.anchor` after a successful move, if the folder already has one, so location history stays current regardless of which mode is used.
+
+### Known bugs (not yet fixed)
+- None currently identified.
+
+### Planned (not yet implemented)
+- None currently planned.
+
 ## V1.0.0 — 2026-09-20 11:30
 ### Changes
 - Ported `claude-mv` from a Bash/macOS script to a cross-platform Python script (`claude-mv.py`) that runs natively on Windows.
